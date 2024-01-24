@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="page">
+            <div class="container">
+                <div class="header">
+                    <div class="menu">
+                        <div class="logo"></div>
+                        <a href="#" class="menu-text">home</ф>
+                        <a href="#" class="menu-text">daily news</a>
+                        <a href="#" class="menu-text">lego sets</a>
+                        <a href="#" class="menu-text">cart</a>
+                        <a href="#" class="menu-text">log in</a>
+                    </div>
+                    <div id="imgroll">
+                        <div id="carousel">
+                            <div class="carousel-item"><img src="marvel.png"></div>
+                            <div class="carousel-item"><img src="friends.png"></div>
+                            <div class="carousel-item"><img src="star.png"></div>
+                            <div class="carousel-item"><img src="ninj.png"></div>
+                            <div class="carousel-item"><img src="harry.png"></div>
+                        </div> 
+                    </div>
+                    <script>
+                        const carousel = document.getElementById('carousel');
+                      
+                        function nextSlide() {
+                          const firstItem = carousel.children[0];
+                          carousel.style.transition = 'transform 0.5s ease-in-out';
+                          carousel.style.transform = `translateX(-${firstItem.offsetWidth}px)`;
+                      
+                          setTimeout(() => {
+                            carousel.appendChild(firstItem);
+                            carousel.style.transition = 'none';
+                            carousel.style.transform = 'translateX(0)';
+                            setTimeout(() => {
+                              carousel.style.transition = 'transform 0.5s ease-in-out';
+                            }, 0);
+                          }, 500); 
+                        }
+                      
+                        setInterval(nextSlide, 2000);
+                   </script>
+                    <div class="dots">
+                        <p class="h">Самовыражайтесь в 3D</p>
+                        <p class="txt-dots">Попробуйте наш онлайн-инструмент для украшения DOTS!</p>
+                        <div class="button-dots">
+                            <a href="#" class="txt-button">Наборы    ></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="future">
+                        <p class="hh">Будующие наборы</p>
+                        <div class="cards">
+                            <div class="card">
+                                <div id="packs-container">
+                                    <div id="packs">
+                                      <div class="packs-item"><img class="img-card" src="vespa1.png" alt="Vespa 1"></div>
+                                      <div class="packs-item"><img class="img-card" src="vespa2.png" alt="Vespa 2"></div>
+                                    </div>
+                                    <div class="arrow" id="prev-arrow1">&larr;</div>
+                                    <div class="arrow" id="next-arrow1">&rarr;</div>
+                                </div>
+                                <p class="name">Vespa 125 LEGO® Ideas</p>
+                                <div class="like">
+                                    <div class="heart"></div>
+                                    <div class="num"></div>
+                                </div>
+                                <script>
+                                    const packs = document.getElementById('packs');
+                                    const prevArrow = document.getElementById('prev-arrow1');
+                                    const nextArrow = document.getElementById('next-arrow1');
+                                    let currentIndex = 0;
+                                  
+                                    function showPack(index) {
+                                      const totalItems = packs.children.length;
+                                      index = (index + totalItems) % totalItems;
+                                      const offset = -index * 300;
+                                      packs.style.transform = `translateX(${offset}px)`;
+                                      currentIndex = index;
+                                    }
+                                  
+                                    function showNextPack() {
+                                      showPack(currentIndex + 1);
+                                    }
+                                  
+                                    function showPrevPack() {
+                                      showPack(currentIndex - 1);
+                                    }
+                                  
+                                    nextArrow.addEventListener('click', showNextPack);
+                                    prevArrow.addEventListener('click', showPrevPack);
+                                    
+                                </script>
+                            </div>
+                            <div class="card">
+                                <div id="future-container">
+                                    <div id="future">
+                                      <div class="future-item"><img class="img-card" src="elvis1.png" alt="Elvis 1"></div>
+                                      <div class="future-item"><img class="img-card" src="elvis2.png" alt="Elvis 2"></div>
+                                    </div>
+                                    <div class="arrow" id="prev-arrow2">&larr;</div>
+                                    <div class="arrow" id="next-arrow2">&rarr;</div>
+                                </div>
+                                <p class="name">Элвис Пресли LEGO® Ideas</p>
+                                <div class="like">
+                                    <div class="heart"></div>
+                                    <div class="num"></div>
+                                </div>
+                                <script>
+                                    const future = document.getElementById('future');
+                                    const preArrow = document.getElementById('prev-arrow2');
+                                    const nexArrow = document.getElementById('next-arrow2');
+                                  
+                                    let currentIndex2 = 0;
+                                  
+                                    function showFuture(index) {
+                                      const totalItems = future.children.length;
+                                      index = (index + totalItems) % totalItems;
+                                      const offset = -index * 300;
+                                      future.style.transform = `translateX(${offset}px)`;
+                                      currentIndex2 = index;
+                                    }
+                                  
+                                    function showNextFuture() {
+                                      showFuture(currentIndex2 + 1);
+                                    }
+                                  
+                                    function showPrevFuture() {
+                                      showFuture(currentIndex2 - 1);
+                                    }
+                                  
+                                    nexArrow.addEventListener('click', showNextFuture);
+                                    preArrow.addEventListener('click', showPrevFuture);
+                                </script>
+                            </div>
+                            <div class="card">
+                                <div id="packsfuture-container">
+                                    <div id="packsfuture">
+                                      <div class="packsfuture-item"><img class="img-card" src="globus1.png" alt="Globus 1"></div>
+                                      <div class="packsfuture-item"><img class="img-card" src="globus2.png" alt="Globus 2"></div>
+                                    </div>
+                                    <div class="arrow" id="prev-arrow3">&larr;</div>
+                                    <div class="arrow" id="next-arrow3">&rarr;</div>
+                                  </div>
+                                <script>
+                                    const packsfuture = document.getElementById('packsfuture');
+                                    const prArrow = document.getElementById('prev-arrow3');
+                                    const neArrow = document.getElementById('next-arrow3');
+                                  
+                                    let currentIndex3 = 0;
+                                  
+                                    function showPacksFuture(index) {
+                                      const totalItems = packsfuture.children.length;
+                                      index = (index + totalItems) % totalItems;
+                                      const offset = -index * 300;
+                                      packsfuture.style.transform = `translateX(${offset}px)`;
+                                      currentIndex3 = index;
+                                    }
+                                  
+                                    function showNextPacksFuture() {
+                                      showPacksFuture(currentIndex3 + 1);
+                                    }
+                                  
+                                    function showPrevPacksFuture() {
+                                      showPacksFuture(currentIndex3 - 1);
+                                    }
+                                  
+                                    neArrow.addEventListener('click', showNextPacksFuture);
+                                    prArrow.addEventListener('click', showPrevPacksFuture);
+                                </script>
+                                <p class="name">Машина-трансформер LEGO® Ideas</p>
+                                <div class="like">
+                                    <div class="heart"></div>
+                                    <div class="num"></div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div id="futurepacks-container">
+                                    <div id="futurepacks">
+                                      <div class="futurepacks-item"><img class="img-card" src="mks1.png" alt="MKS 1"></div>
+                                      <div class="futurepacks-item"><img class="img-card"    src="mks2.png" alt="MKS 2"></div>
+                                    </div>
+                                    <div class="arrow" id="prev-arrow4">&larr;</div>
+                                    <div class="arrow" id="next-arrow4">&rarr;</div>
+                                </div>
+                                <script>
+                                    const futurepacks = document.getElementById('futurepacks');
+                                    const pArrow = document.getElementById('prev-arrow4');
+                                    const nArrow = document.getElementById('next-arrow4');
+                                  
+                                    let currentIndex4 = 0;
+                                  
+                                    function showFuturePacks(index) {
+                                      const totalItems = futurepacks.children.length;
+                                      index = (index + totalItems) % totalItems;
+                                      const offset = -index * 300;
+                                      futurepacks.style.transform = `translateX(${offset}px)`;
+                                      currentIndex4 = index;
+                                    }
+                                  
+                                    function showNextFuturePacks() {
+                                      showFuturePacks(currentIndex4 + 1);
+                                    }
+                                  
+                                    function showPrevFuturePacks() {
+                                      showFuturePacks(currentIndex4 - 1);
+                                    }
+                                  
+                                    nArrow.addEventListener('click', showNextFuturePacks);
+                                    pArrow.addEventListener('click', showPrevFuturePacks);
+                                </script>
+                                <p class="name">МКС LEGO® Ideas</p>
+                                <div class="like">
+                                    <div class="heart"></div>
+                                    <div class="num"></div>
+                                </div>
+                            </div>
+                            
+                            
+                        </div>
+                    </div>
+                    <div class="marvel">
+                        <p class="hh">Наборы Marvel</p>
+                        <div class="cards">
+                            <div class="card">
+                                <div id="packsm-container">
+                                    <div id="packsm">
+                                      <div class="packsm-item"><img class="img-card" src="inf1.png" alt="Vespa 1"></div>
+                                      <div class="packsm-item"><img class="img-card" src="inf2.png" alt="Vespa 2"></div>
+                                    </div>
+                                    <div class="arrow" id="prev-arrow1m">&larr;</div>
+                                    <div class="arrow" id="next-arrow1m">&rarr;</div>
+                                </div>
+                                <p class="name">«Взлёт Домо» LEGO® Marvel</p>
+                                <div class="like">
+                                    <div class="heart"></div>
+                                    <div class="num"></div>
+                                </div>
+                                 <script>
+                                    const packsm = document.getElementById('packsm');
+                                    const prevArrowm = document.getElementById('prev-arrow1m');
+                                    const nextArrowm = document.getElementById('next-arrow1m');
+                                  
+                                    let currentIndex1m = 0;
+                                  
+                                    function showPacksm(index) {
+                                      const totalItems = packsm.children.length;
+                                      index = (index + totalItems) % totalItems;
+                                      const offset = -index * 300;
+                                      packsm.style.transform = `translateX(${offset}px)`;
+                                      currentIndex1m = index;
+                                    }
+                                  
+                                    function showNextPacksm() {
+                                      showPacksm(currentIndex1m + 1);
+                                    }
+                                    
+                                    function showPrevPacksm() {
+                                      showPacksm(currentIndex1m - 1);
+                                    }
+                                  
+                                    nextArrowm.addEventListener('click', showNextPacksm);
+                                    prevArrowm.addEventListener('click', showPrevPacksm);
+                                </script>
+                            </div>
+                            <div class="card">
+                                <div id="mpacks-container">
+                                    <div id="mpacks">
+                                      <div class="mpacks-item"><img class="img-card" src="thor1.png" alt="Vespa 1"></div>
+                                      <div class="mpacks-item"><img class="img-card" src="thor2.png" alt="Vespa 2"></div>
+                                    </div>
+                                    <div class="arrow" id="mprev-arrow1">&larr;</div>
+                                    <div class="arrow" id="mnext-arrow1">&rarr;</div>
+                                </div>
+                                <p class="name">Козья лодка LEGO® Marvel</p>
+                                <div class="like">
+                                    <div class="heart"></div>
+                                    <div class="num"></div>
+                                </div>
+                                 <script>
+                                    const MPacks = document.getElementById('mpacks');
+                                    const preArrowm = document.getElementById('mprev-arrow1');
+                                    const nexArrowm = document.getElementById('mnext-arrow1');
+                                  
+                                    let mcurrentIndex1 = 0;
+                                  
+                                    function showMPacks(index) {
+                                      const totalItems = packsm.children.length;
+                                      index = (index + totalItems) % totalItems;
+                                      const offset = -index * 300;
+                                      MPacks.style.transform = `translateX(${offset}px)`;
+                                      mcurrentIndex1 = index;
+                                    }
+                                  
+                                    function showNextMPacks() {
+                                      showMPacks(mcurrentIndex1 + 1);
+                                    }
+                                    
+                                    function showPrevMPacks() {
+                                      showMPacks(mcurrentIndex1 - 1);
+                                    }
+                                  
+                                    nexArrowm.addEventListener('click', showNextMPacks);
+                                    preArrowm.addEventListener('click', showPrevMPacks);
+                                </script>
+                            </div>
+                            <div class="card">
+                                <div id="packsm-container">
+                                    <div id="packsmarvel">
+                                      <div class="packsmarvel-item"><img class="img-card" src="guard1.png" alt="Vespa 1"></div>
+                                      <div class="packsmarvel-item"><img class="img-card" src="guard2.png" alt="Vespa 2"></div>
+                                    </div>
+                                    <div class="arrow" id="prev-arrow1marvel">&larr;</div>
+                                    <div class="arrow" id="next-arrow1marvel">&rarr;</div>
+                                </div>
+                                <p class="name">Корабль Стражей LEGO® Marvel</p>
+                                <div class="like">
+                                    <div class="heart"></div>
+                                    <div class="num"></div>
+                                </div>
+                                 <script>
+                                    const PacksMarvel = document.getElementById('packsmarvel');
+                                    const prevArrowMarvel = document.getElementById('prev-arrow1marvel');
+                                    const nextArrowMarvel = document.getElementById('next-arrow1marvel');
+                                  
+                                    let currentIndex1Marvel = 0;
+                                  
+                                    function showPacksMarvel(index) {
+                                      const totalItems = PacksMarvel.children.length;
+                                      index = (index + totalItems) % totalItems;
+                                      const offset = -index * 300;
+                                      PacksMarvel.style.transform = `translateX(${offset}px)`;
+                                      currentIndex1Marvel = index;
+                                    }
+                                  
+                                    function showNextPacksMarvel() {
+                                      showPacksMarvel(currentIndex1Marvel + 1);
+                                    }
+                                    
+                                    function showPrevPacksMarvel() {
+                                      showPacksMarvel(currentIndex1Marvel - 1);
+                                    }
+                                  
+                                    nextArrowMarvel.addEventListener('click', showNextPacksMarvel);
+                                    prevArrowMarvel.addEventListener('click', showPrevPacksMarvel);
+                                </script>
+                            </div>
+                            <div class="card">
+                                <div id="marvelpacks-container">
+                                    <div id="marvelpacks">
+                                      <div class="marvelpacks-item"><img class="img-card" src="kal1.png" alt="Vespa 1"></div>
+                                      <div class="marvelpacks-item"><img class="img-card" src="kal2.png" alt="Vespa 2"></div>
+                                    </div>
+                                    <div class="arrow" id="marvelpre-arrow1">&larr;</div>
+                                    <div class="arrow" id="marvelnex-arrow1">&rarr;</div>
+                                </div>
+                                <p class="name">«Новогодний календарь» LEGO® Marvel</p>
+                                <div class="like">
+                                    <div class="heart"></div>
+                                    <div class="num"></div>
+                                </div>
+                                 <script>
+                                    const MarvelPacks = document.getElementById('marvelpacks');
+                                    const MarvelpreArrow = document.getElementById('marvelpre-arrow1');
+                                    const MarvelnexArrow = document.getElementById('marvelnex-arrow1');
+                                  
+                                    let marvelcurrentIndex1 = 0;
+                                  
+                                    function showMarvelPacks(index) {
+                                      const totalItems = MarvelPacks.children.length;
+                                      index = (index + totalItems) % totalItems;
+                                      const offset = -index * 300;
+                                      MarvelPacks.style.transform = `translateX(${offset}px)`;
+                                      marvelcurrentIndex1 = index;
+                                    }
+                                  
+                                    function showNextMarvelPacks() {
+                                      showMarvelPacks(marvelcurrentIndex1 + 1);
+                                    }
+                                    
+                                    function showPrevMarvelPacks() {
+                                      showMarvelPacks(marvelcurrentIndex1 - 1);
+                                    }
+                                  
+                                    MarvelnexArrow.addEventListener('click', showNextMarvelPacks);
+                                    MarvelpreArrow.addEventListener('click', showPrevMarvelPacks);
+                                </script>
+                            </div>
+                            
+                            
+                        </div>
+                    </div>
+                    <div class="star">
+                        <p class="hh">Наборы Star Wars</p>
+                        <div class="cards">
+                            <div class="card">
+                                <div id="packss-container">
+                                    <div id="packss">
+                                      <div class="packss-item"><img class="img-card" src="kreis1.png" alt="Vespa 1"></div>
+                                      <div class="packss-item"><img class="img-card" src="kreis2.png" alt="Vespa 2"></div>
+                                    </div>
+                                    <div class="arrow" id="prev-arrow1s">&larr;</div>
+                                    <div class="arrow" id="next-arrow1s">&rarr;</div>
+                                </div>
+                                <p class="name">Легкий имперский крейсер LEGO® Star Wars™</p>
+                                <div class="like">
+                                    <div class="heart"></div>
+                                    <div class="num"></div>
+                                </div>
+                                <script>
+                                    const packss = document.getElementById('packss');
+                                    const prevArrows = document.getElementById('prev-arrow1s');
+                                    const nextArrows = document.getElementById('next-arrow1s');
+                                  
+                                    let currentIndex1s = 0;
+                                  
+                                    function showPackss(index) {
+                                      const totalItems = packss.children.length;
+                                      index = (index + totalItems) % totalItems;
+                                      const offset = -index * 300;
+                                      packss.style.transform = `translateX(${offset}px)`;
+                                      currentIndex1s = index;
+                                    }
+                                  
+                                    function showNextPackss() {
+                                      showPackss(currentIndex1s + 1);
+                                    }
+                                    
+                                    function showPrevPackss() {
+                                      showPackss(currentIndex1s - 1);
+                                    }
+                                  
+                                    nextArrows.addEventListener('click', showNextPackss);
+                                    prevArrows.addEventListener('click', showPrevPackss);
+                                </script>
+                            </div>
+                            <div class="card">
+                                <div id="spacks-container">
+                                    <div id="spacks">
+                                      <div class="spacks-item"><img class="img-card" src="korvet1.png" alt="Vespa 1"></div>
+                                      <div class="spacks-item"><img class="img-card" src="korvet2.png" alt="Vespa 2"></div>
+                                    </div>
+                                    <div class="arrow" id="sprev-arrow1">&larr;</div>
+                                    <div class="arrow" id="snext-arrow1">&rarr;</div>
+                                </div>
+                                <p class="name">Имперский бронированный корвет LEGO® Star Wars™</p>
+                                <div class="like">
+                                    <div class="heart"></div>
+                                    <div class="num"></div>
+                                </div>
+                                <script>
+                                    const Spacks = document.getElementById('spacks');
+                                    const SprevArrow = document.getElementById('sprev-arrow1');
+                                    const SnextArrow = document.getElementById('snext-arrow1');
+                                  
+                                    let ScurrentIndex1 = 0;
+                                  
+                                    function showSpacks(index) {
+                                      const totalItems = Spacks.children.length;
+                                      index = (index + totalItems) % totalItems;
+                                      const offset = -index * 300;
+                                      Spacks.style.transform = `translateX(${offset}px)`;
+                                      ScurrentIndex1 = index;
+                                    }
+                                  
+                                    function showNextSpacks() {
+                                      showSpacks(ScurrentIndex1 + 1);
+                                    }
+                                    
+                                    function showPrevSpacks() {
+                                      showSpacks(ScurrentIndex1 - 1);
+                                    }
+                                  
+                                    SnextArrow.addEventListener('click', showNextSpacks);
+                                    SprevArrow.addEventListener('click', showPrevSpacks);
+                                </script>
+                            </div>
+                            <div class="card">
+                                <div id="packsstar-container">
+                                    <div id="packsstar">
+                                      <div class="packsstar-item"><img class="img-card" src="mast1.png" alt="Vespa 1"></div>
+                                      <div class="packsstar-item"><img class="img-card" src="mast2.png" alt="Vespa 2"></div>
+                                    </div>
+                                    <div class="arrow" id="prev-arrow1star">&larr;</div>
+                                    <div class="arrow" id="next-arrow1star">&rarr;</div>
+                                </div>
+                                <p class="name">Мастерская Мандалорки-Кузнеца LEGO® Star Wars™</p>
+                                <div class="like">
+                                    <div class="heart"></div>
+                                    <div class="num"></div>
+                                </div>
+                                <script>
+                                    const packsstar = document.getElementById('packsstar');
+                                    const prevArrowstar = document.getElementById('prev-arrow1star');
+                                    const nextArrowstar = document.getElementById('next-arrow1star');
+                                  
+                                    let currentIndex1star = 0;
+                                  
+                                    function showPacksstar(index) {
+                                      const totalItems = packsstar.children.length;
+                                      index = (index + totalItems) % totalItems;
+                                      const offset = -index * 300;
+                                      packsstar.style.transform = `translateX(${offset}px)`;
+                                      currentIndex1star = index;
+                                    }
+                                  
+                                    function showNextPacksstar() {
+                                      showPacksstar(currentIndex1star + 1);
+                                    }
+                                    
+                                    function showPrevPacksstar() {
+                                      showPacksstar(currentIndex1star - 1);
+                                    }
+                                  
+                                    nextArrowstar.addEventListener('click', showNextPacksstar);
+                                    prevArrowstar.addEventListener('click', showPrevPacksstar);
+                                </script>
+                            </div>
+                            <div class="card">
+                                <div id="starpacks-container">
+                                    <div id="starpacks">
+                                      <div class="starpacks-item"><img class="img-card" src="kals1.png" alt="Vespa 1"></div>
+                                      <div class="tarspacks-item"><img class="img-card" src="kals2.png" alt="Vespa 2"></div>
+                                    </div>
+                                    <div class="arrow" id="starprev-arrow1">&larr;</div>
+                                    <div class="arrow" id="starnext-arrow1">&rarr;</div>
+                                </div>
+                                <p class="name">«Новогодний календарь» LEGO® Star Wars™</p>
+                                <div class="like">
+                                    <div class="heart"></div>
+                                    <div class="num"></div>
+                                </div>
+                                <script>
+                                    const Starpacks = document.getElementById('starpacks');
+                                    const StarprevArrow = document.getElementById('starprev-arrow1');
+                                    const StarnextArrow = document.getElementById('starnext-arrow1');
+                                  
+                                    let StarcurrentIndex1 = 0;
+                                  
+                                    function showStarpacks(index) {
+                                      const totalItems = Starpacks.children.length;
+                                      index = (index + totalItems) % totalItems;
+                                      const offset = -index * 300;
+                                      Starpacks.style.transform = `translateX(${offset}px)`;
+                                      StarcurrentIndex1 = index;
+                                    }
+                                  
+                                    function showNextStarpacks() {
+                                      showStarpacks(StarcurrentIndex1 + 1);
+                                    }
+                                    
+                                    function showPrevStarpacks() {
+                                      showStarpacks(StarcurrentIndex1 - 1);
+                                    }
+                                  
+                                    StarnextArrow.addEventListener('click', showNextStarpacks);
+                                    StarprevArrow.addEventListener('click', showPrevStarpacks);
+                                </script>
+                            </div>
+                            
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="scrollBtn" onclick="scrollToTop()"><img src="ironman.png"></div>
+        <script>
+          window.onscroll = function() {
+            showScrollButton();
+          };
+      
+          function showScrollButton() {
+            var button = document.getElementById("scrollBtn");
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+              button.style.display = "block";
+            } else {
+              button.style.display = "none";
+            }
+          }
+      
+          
+          function scrollToTop() {
+            var currentPosition = document.documentElement.scrollTop || document.body.scrollTop;
+      
+            if (currentPosition > 0) {
+              window.requestAnimationFrame(scrollToTop);
+              window.scrollTo(0, currentPosition - currentPosition / 8);
+            }
+          }
+        </script>
+    </div>
+</body>
+</html>

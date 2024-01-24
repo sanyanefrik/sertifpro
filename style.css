@@ -1,0 +1,498 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');
+div, p, a {margin: 0;padding: 0;}
+.wrapper{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("bg.png");
+    
+}
+.page{
+    padding: 0;
+    margin: 0;
+}
+.container{
+  
+  box-shadow: 5px 5px 100px black, -5px -5px 100px black;
+  background-color: white;
+  width: 1440px;
+  margin: auto;
+}
+.header{
+    width: 100%;
+    height: 895px;
+}
+.menu{
+    width: 100%;
+    height: 100px;
+    background-color: #efc900;
+    display: flex;
+}
+.logo{
+    width: 100px;
+    height: 100px;
+    background-image: url("logo.png");
+}
+.menu-text{
+  color: #000;
+  text-decoration: none;
+    margin-top: 35px;
+    margin-left: 100px;
+    font-family: "Rubik Mono One";
+    font-size: 24px;
+
+}
+#imgroll {
+    margin-top: 109px;
+    width: 1440px;
+    overflow: hidden;
+    position: relative;
+}
+
+#carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    flex: 0 0 500px;
+    height: 200px;
+}
+.dots{
+    margin-top: 109px;
+    width: 100%;
+    height: 400px;
+    background-image: url("dots.png");
+}
+.h{
+    font-family: "inter";
+    margin-left: 983px;
+    padding-top: 80px;
+    font-size: 25px;
+    font-weight: medium;
+}
+.txt-dots{
+    font-family: "inter";
+    margin-left: 983px;
+    padding-top: 27px;
+    font-size: 16px;
+    width: 297px;
+    text-align: right;
+}
+.button-dots{
+    justify-content: center;
+    text-align: center;
+    width: 175px;
+    height: 41px;
+    border-radius: 10px;
+    margin-left: 1106px;
+    margin-top: 37px;
+    background-color: black;
+}
+.txt-button{
+    font-size: 20px;
+    font-family: "inter";
+    color: white;
+    text-decoration: none;
+}
+.content{
+  margin-top: -5px  ;
+  width: 100%;
+  background-color: white;
+}
+#packs-container {
+    width: 300px;
+    overflow: hidden;
+    position: relative;
+    
+  }
+
+  #packs {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .img-card {
+    background-color: #ffffff;
+    border-radius: 20px;
+    flex: 0 0 500px;
+    
+
+  }
+
+  .arrow {
+    font-size: 24px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  
+  #prev-arrow1 {
+    left: 10px;
+    background-color: white;
+  }
+
+  #next-arrow1 {
+    right: 10px;
+    background-color: white;
+  }
+  
+  #future-container {
+    width: 300px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  #future {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .future-item {
+    background-color: #ffffff;
+    border-radius: 20px;
+
+    flex: 0 0 300px;
+    height: 250px;
+  }
+  #prev-arrow2 {
+    left: 10px;
+    background-color: white;
+  }
+  #next-arrow2 {
+    right: 10px;
+    background-color: white;
+  }
+  #packsfuture-container {
+    width: 300px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  #packsfuture {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .packsfuture-item {
+    background-color: #ffffff;
+    border-radius: 20px;
+
+    flex: 0 0 300px;
+    height: 250px;
+  }
+  #prev-arrow3 {
+    left: 10px;
+    background-color: white;
+  }
+
+  #next-arrow3 {
+    right: 10px;
+    background-color: white;
+  }
+  #futurepacks-container {
+    width: 300px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  #futurepacks {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .futurepacks-item {
+    background-color: #ffffff;
+    flex: 0 0 300px;
+    height: 250px;
+    border-radius: 20px;
+      
+  }
+  #prev-arrow4 {
+    left: 10px;
+    background-color: white;
+  }
+
+  #next-arrow4 {
+    right: 10px;
+    background-color: white;
+  }
+  .future{
+    width: 1260px;
+    height: 498px;
+    margin-top: 26px;
+    margin-left: 90px;
+
+  }
+  .hh{
+    font-size: 40px;
+    font-weight: bold;
+    font-family: "inter";
+    color: black;
+
+  }
+  .cards{
+    width: 100%;
+    height: 400px;
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .card{
+  box-shadow: 5px 5px 5px black, -5px -5px 5px black;
+    width: 300px;
+    height: 400;
+    border-radius: 20px;
+    background-color: white;
+  }
+  #packsm-container {
+    width: 300px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  #packsm {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .packsm-item {
+    background-color: #ffffff;
+    flex: 0 0 300px;
+    height: 250px;
+    border-radius: 20px;
+      
+  }
+  #prev-arrow1m {
+    left: 10px;
+    background-color: white;
+  }
+
+  #next-arrow1m {
+    right: 10px;
+    background-color: white;
+  }
+  #mpacks-container {
+    width: 300px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  #mpacks {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .mpacks-item {
+    background-color: #ffffff;
+    flex: 0 0 300px;
+    height: 250px;
+    border-radius: 20px;
+      
+  }
+  #mprev-arrow1 {
+    left: 10px;
+    background-color: white;
+  }
+
+  #mnext-arrow1 {
+    right: 10px;
+    background-color: white;
+  }
+  #packsmarvel-container {
+    width: 300px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  #packsmarvel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .packsmarvel-item {
+    background-color: #ffffff;
+    flex: 0 0 300px;
+    height: 250px;
+    border-radius: 20px;
+      
+  }
+  #prev-arrow1marvel {
+    left: 10px;
+    background-color: white;
+  }
+
+  #next-arrow1marvel {
+    right: 10px;
+    background-color: white;
+  }#marvelpacks-container {
+    width: 300px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  #marvelpacks {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .marvelpacks-item {
+    background-color: #ffffff;
+    flex: 0 0 300px;
+    height: 250px;
+    border-radius: 20px;
+      
+  }
+  #marvelpre-arrow1 {
+    left: 10px;
+    background-color: white;
+  }
+
+  #marvelnex-arrow1 {
+    right: 10px;
+    background-color: white;
+  }
+  .marvel{
+    width: 1260px;
+    height: 498px;
+    margin-top: 50px;
+    margin-left: 90px;
+  }
+  .star{
+    width: 1260px;
+    height: 498px;
+    margin-top: 50px;
+    margin-left: 90px;
+  }
+#packss-container {
+  width: 300px;
+  overflow: hidden;
+  position: relative;
+}
+
+#packss {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.packss-item {
+  background-color: #ffffff;
+  flex: 0 0 300px;
+  height: 250px;
+  border-radius: 20px;
+    
+}
+#prev-arrow1s {
+  left: 10px;
+  background-color: white;
+}
+
+#next-arrow1s{
+  right: 10px;
+  background-color: white;
+}
+#spacks-container {
+  width: 300px;
+  overflow: hidden;
+  position: relative;
+}
+
+#spacks {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.spacks-item {
+  background-color: #ffffff;
+  flex: 0 0 300px;
+  height: 250px;
+  border-radius: 20px;
+    
+}
+#sprev-arrow1 {
+  left: 10px;
+  background-color: white;
+}
+
+#snext-arrow1{
+  right: 10px;
+  background-color: white;
+}
+#packsstar-container {
+  width: 300px;
+  overflow: hidden;
+  position: relative;
+}
+
+#packsstar {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.packsstar-item {
+  background-color: #ffffff;
+  flex: 0 0 300px;
+  height: 250px;
+  border-radius: 20px;
+    
+}
+#prev-arrow1star {
+  left: 10px;
+  background-color: white;
+}
+
+#next-arrow1star{
+  right: 10px;
+  background-color: white;
+}
+#starpacks-container {
+  width: 300px;
+  overflow: hidden;
+  position: relative;
+}
+
+#starpacks {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.starpacks-item {
+  background-color: #ffffff;
+  flex: 0 0 300px;
+  height: 250px;
+  border-radius: 20px;
+    
+}
+#starprev-arrow1 {
+  left: 10px;
+  background-color: white;
+}
+
+#starnext-arrow1{
+  right: 10px;
+  background-color: white;
+}
+.name{
+  width: 280px;
+  font-size: 24px;
+  font-weight: bold ;
+  color: black;
+  margin-left: 10px;
+  margin-top: 10px;
+  font-family: "inter";
+}
+#scrollBtn {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 100px;
+  height: 140px;
+  background-size: 100%;
+  cursor: pointer;
+  outline: none;
+  display: none;
+}
